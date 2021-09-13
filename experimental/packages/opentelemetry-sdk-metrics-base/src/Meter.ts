@@ -31,8 +31,8 @@ import { UpDownCounterMetric } from './UpDownCounterMetric';
 import { UpDownSumObserverMetric } from './UpDownSumObserverMetric';
 import { ValueObserverMetric } from './ValueObserverMetric';
 import { ValueRecorderMetric } from './ValueRecorderMetric';
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const merge = require('lodash.merge');
+// @ts-expect-error: lodash.merge is not esm-friendly yet
+import * as merge from 'lodash.merge';
 
 /**
  * Meter is an implementation of the {@link Meter} interface.
